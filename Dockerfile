@@ -7,5 +7,5 @@ RUN ["mvn", "clean", "install"]
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/helloworld-${BUILD_NUMBER}.jar"]
+ENTRYPOINT ["/usr/java/latest/bin/java", "-jar", "/data/springboot-helloworld/target/helloworld-${BUILD_NUMBER}.jar"]
 
